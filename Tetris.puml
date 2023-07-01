@@ -1,0 +1,55 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class java.awt.Color
+class java.awt.Graphics
+class java.awt.Image
+class java.awt.event.KeyEvent
+class java.awt.event.WindowAdapter
+class java.awt.event.WindowEvent
+class javax.sound.sampled.AudioFormat
+class javax.sound.sampled.AudioInputStream
+class javax.sound.sampled.AudioSystem
+class javax.sound.sampled.Clip
+class javax.sound.sampled.DataLine
+class javax.swing.ImageIcon
+class javax.swing.JDialog
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class tetris.gui.AboutDialog
+class tetris.gui.GraphicsTetrisDialog
+class tetris.gui.MainApp
+class tetris.gui.RulesDialog
+class tetris.gui.TextTetrisDialog
+class tetris.lib.game.Board
+interface tetris.gui.Drawable
+tetris.gui.AboutDialog ..> java.lang.Override
+tetris.gui.AboutDialog ..> java.lang.SuppressWarnings
+tetris.gui.AboutDialog --|> javax.swing.JDialog
+tetris.gui.AboutDialog ..> javax.swing.JOptionPane
+tetris.gui.GraphicsTetrisDialog ..> java.lang.Override
+tetris.gui.GraphicsTetrisDialog ..> java.lang.SuppressWarnings
+tetris.gui.GraphicsTetrisDialog ..> java.awt.event.KeyEvent
+tetris.gui.GraphicsTetrisDialog --|> javax.swing.JDialog
+tetris.gui.MainApp ..> java.lang.Override
+tetris.gui.MainApp ..> java.lang.SuppressWarnings
+tetris.gui.MainApp ..> java.awt.Color
+tetris.gui.MainApp ..> java.awt.Image
+tetris.gui.MainApp ..> java.awt.event.WindowAdapter
+tetris.gui.MainApp ..> java.awt.event.WindowEvent
+tetris.gui.MainApp ..> javax.sound.sampled.AudioFormat
+tetris.gui.MainApp ..> javax.sound.sampled.AudioInputStream
+tetris.gui.MainApp ..> javax.sound.sampled.AudioSystem
+tetris.gui.MainApp ..> javax.sound.sampled.Clip
+tetris.gui.MainApp ..> javax.sound.sampled.DataLine
+tetris.gui.MainApp ..> javax.swing.ImageIcon
+tetris.gui.MainApp --|> javax.swing.JFrame
+tetris.gui.RulesDialog ..> java.lang.Override
+tetris.gui.RulesDialog ..> java.lang.SuppressWarnings
+tetris.gui.RulesDialog --|> javax.swing.JDialog
+tetris.gui.TextTetrisDialog ..> java.lang.Override
+tetris.gui.TextTetrisDialog ..> java.lang.SuppressWarnings
+tetris.gui.TextTetrisDialog --|> javax.swing.JDialog
+tetris.gui.TextTetrisDialog ..> tetris.lib.game.Board
+tetris.gui.Drawable ..> java.awt.Graphics
+@enduml
